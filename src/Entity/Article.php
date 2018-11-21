@@ -27,6 +27,27 @@ class Article
 
     private $body;
 
+    // Getters & Setters
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function setTitle($title){
+        $this->title = $title;
+    }
+
+    public function getBody(){
+        return $this->body;
+    }
+
+    public function setBody($body){
+        $this->body = $body;
+    }
     // public function getId(): ?int
     // {
     //     return $this->id;
