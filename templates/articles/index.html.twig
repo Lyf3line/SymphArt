@@ -3,7 +3,8 @@
 {% block title %}SymphArt Articles{% endblock %}
 
 {% block body %}
-<h1>Articlesss</h1>
+	<br>
+<h1>Articles</h1>
 
 	{% if articles %}
 
@@ -19,8 +20,8 @@
 		  <tbody>
 		  	{% for article in articles %}
 				 <tr class="table-active">
-			      	<td>{{article}}</td>
-			      	<td><a href="/article/1" class="btn btn-dark">Lees verder..</a></td>
+			      	<td>{{ article.title }}</td>
+			      	<td><a href="/article/{{ article.id }}" class="btn btn-dark">Show</a></td>
 			    </tr>
 		  	{% endfor %}
 		   </tbody>
