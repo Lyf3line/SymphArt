@@ -8,7 +8,7 @@
 
 	{% if articles %}
 
-		<table class="table table-hover">
+		<table id="articles" class="table table-hover">
 
 		  <thead>
 		    <tr>
@@ -21,7 +21,8 @@
 		  	{% for article in articles %}
 				 <tr class="table-active">
 			      	<td>{{ article.title }}</td>
-			      	<td><a href="/article/{{ article.id }}" class="btn btn-dark">Show</a></td>
+			      	<td><a href="/article/{{ article.id }}" class="btn btn-dark">Show</a>
+			      		<a href="#" class="btn btn-danger delete-article" data-id="{{article.id}}">Delete</a></td>
 			    </tr>
 		  	{% endfor %}
 		   </tbody>
@@ -32,4 +33,8 @@
 		<p>No articles to display.</p>
 	{% endif %}
 
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript" src="/js/main.js"></script>
 {% endblock %}
